@@ -89,8 +89,9 @@ function ViewCoursesRequest(){
                             <div className="col-md-6">
                                 <form onSubmit={VerifyCourse}>
                                     <input type="hidden" id="courseId" value={course['courseId']}></input>
+                                    <input type ="submit" value="Authorize" className="btn btn-primary w-100" style={{fontSize:"12px"}}></input>
                                 </form>
-                                <input type ="submit" value="Authorize" className="btn btn-primary w-100" style={{fontSize:"12px"}}></input>
+                                
 
                             </div>
                         :<></>}
