@@ -127,7 +127,7 @@ function StudentRegistration(){
                         </div>
                         <div className="form-group">
                             <label>Email</label>
-                            <input type="text" id="email" className="form-control" placeholder="Enter Email" ></input>
+                            <input type="email" id="email" className="form-control" placeholder="Enter Email" ></input>
                             <div className="text-danger" id="emailMsg"></div>
                         </div>
                         <div className="form-group">
