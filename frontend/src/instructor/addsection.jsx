@@ -83,7 +83,7 @@ function Addsection(){
                             <div className="text-center h4">Add New Section</div>
                             <div className="form-group">
                                 <input type="hidden" id="courseId"></input>
-                                <input type="text" id="sectionName" className="form-control" placeholder="Section Name"></input>
+                                <input type="text" id="sectionName" required className="form-control" placeholder="Section Name"></input>
                             </div>
                             <input type="submit" value={"Add Section"} className="btn btn-primary w-100 mt-2"></input>
                         </form>
