@@ -38,6 +38,10 @@ public class CourseService {
 
 
 	public String addCourseAction(CourseModel courseModel, String email,long subCategoryId) {
+		List<CourseModel> courseModelsList = courseRepository.findByCourseName(courseModel.getCourseName());
+		if(courseModelsList.size()>0) {
+			return "Course  Exists";
+		}
 		InstructorModel instructorModel = instructorRepository.findByEmail(email);
 		SubCategoryModel subCategoryModel = subCategoryRepository.findById(subCategoryId).get();
 		courseModel.setSubCategoryModel(subCategoryModel);
