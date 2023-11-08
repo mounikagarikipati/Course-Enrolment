@@ -13,7 +13,9 @@ function StudentHead(){
         <li>
             <Link  aria-current="page" className="text-dark" to="/studentHome"><b>Student Home</b></Link>
         </li>
-       
+      <li>
+            <Link  aria-current="page" className="text-dark" to="/logout"><b>Logout</b></Link>
+        </li>
     </ul>
 </nav>
 </>
