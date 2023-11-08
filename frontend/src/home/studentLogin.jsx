@@ -72,12 +72,11 @@ function StudentLogin(){
                              <div className="text-center">
                              </div>
                              <div className="mt-3 text-center">
+                                <input type="submit" value={"Login"} className="btn btn-primary w-50 text-center mt-3 text-white p-2" ></input>
                              New Instructor?
                                  <Link to="/studentRegistration" >Register</Link>
                          </div>
                         </form>
-                        <input type="submit" value={"Login"} className="btn btn-primary w-50 text-center mt-3 text-white p-2" ></input>
-
                     </div>
                 </div>
             </div>
