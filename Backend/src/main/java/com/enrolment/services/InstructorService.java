@@ -31,7 +31,10 @@ public class InstructorService {
 	private LoginDetailsRepository loginDetailsRepository;
 
 	public String instructorReg(InstructorModel instructorModel) {
-		
+		List<InstructorModel>  instructorModelsList = instructorRepository.findByEmailOrPhone(instructorModel.getEmail(),instructorModel.getPhone());
+		if(instructorModelsList.size() >0) {
+			return "Duplicate Details";
+		}
 		
 		List<LoginDetailsModel> loginDetailsModelsList = loginDetailsRepository.findAll();
 		if(loginDetailsModelsList.size()==0) {
