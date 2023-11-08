@@ -54,6 +54,7 @@ function Addsection(){
             headers:{'Authorization': 'Bearer '+token},
             contentType : "application/json; charset=utf-8",
             success : function(data,status){
+                setSections(data)
             }
             
         })
