@@ -108,8 +108,9 @@ function Addsection(){
                                 <td>
                                     <form onSubmit={addVideos}>
                                         <input type="hidden" id="sectionId" value={section['sectionId']}></input>
+                                         <input type="submit"  value={"Videos"} className="btn btn-primary w-100"></input>
                                     </form>
-                                    <input type="submit"  value={"Videos"} className="btn btn-primary w-100"></input>
+                                   
 
                                 </td>
                             </tr>
