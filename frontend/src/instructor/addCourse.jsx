@@ -89,8 +89,7 @@ function AddCourse(){
                                 <label><b>Choose SubCategory</b></label>
                                 <select id="subCategoryId" className="form-control mt-1">
                             {subCategories.map((subCategory,index)=>
-                             <option key={subCategory['subCategoryId']} value={'1'}>{subCategory['subCategoryName']}({subCategory['categoryModel']['categoryName']})</option>
-                             )}   
+                                <option key={subCategory['subCategoryId']} value={subCategory['subCategoryId']}>{subCategory['subCategoryName']}({subCategory['categoryModel']['categoryName']})</option>                             )}   
                              </select>
                             </div>
                             <div className="form-group">
