@@ -22,6 +22,10 @@ public class SubCategoryService {
 	private CategoryRepository categoryRepository;
 
 	public String addSubCategory(SubCategoryModel subCategoryModel) {
+		List<SubCategoryModel> subCategoryModelsList = subCategoryRepository.findBySubCategoryName(subCategoryModel.getSubCategoryName());
+		if(subCategoryModelsList.size()>0) {
+			return "Sub Category  Exists";
+		}
 		CategoryModel categoryModel = categoryRepository.findById(subCategoryModel.getCategoryId()).get();
 		subCategoryModel.setCategoryModel(categoryModel);
 		subCategoryRepository.save(subCategoryModel);
