@@ -78,12 +78,12 @@ function StudentRegistration(){
 
 
         let student = new FormData();
-        student.append('name', email);
-        student.append('email', name);
-        student.append('phone', address);
+        student.append('name', name);
+        student.append('email', email);
+        student.append('phone', phone);
         student.append('password', password);
         student.append('profielPicture', profielPicture);
-        student.append('address', phone);
+        student.append('address', address);
         student.append('walletAmount', walletAmount);
         student.append('profielPicture', state.selectedFile);
         let url = "http://localhost:2023/customerReg";
