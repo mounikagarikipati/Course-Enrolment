@@ -18,7 +18,10 @@ public class CategoryService {
 
 	public String addCategory(CategoryModel categoryModel) {
 		System.out.println(categoryModel.getCategoryName());
-		
+		List<CategoryModel> categoryModelsList = categoryRepository.findByCategoryName(categoryModel.getCategoryName());
+		if(categoryModelsList.size()>0) {
+			return "Category  Exists";
+		}
 		categoryRepository.save(categoryModel);
 		return "Category Added Successfully";
 	}
