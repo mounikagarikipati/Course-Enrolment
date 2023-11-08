@@ -21,6 +21,10 @@ public class SectionService {
 	private CourseRepository courseRepository;
 
 	public String addSection(SectionModel courseSectionModel) {
+		List<SectionModel> courseSectionModelList = courseSectionRepository.findBySectionNameAndCourseModel(courseSectionModel.getSectionName(),courseSectionModel.getCourseModel());
+		if(courseSectionModelList.size()>0) {
+			return courseSectionModel.getSectionName()+" "+" Exists";
+		}
 		
 		CourseModel courseModel = courseRepository.findById(courseSectionModel.getCourseId()).get();
 		courseSectionModel.setCourseModel(courseModel);
